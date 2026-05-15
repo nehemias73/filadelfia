@@ -4,140 +4,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filadelfia - Próximamente</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1a1a1a;
-            margin: 0;
-            overflow: hidden;
-        }
+    <title>Filadelfia | Helado artesanal de verdad</title>
+    <meta name="description"
+        content="Heladería artesanal Filadelfia. Sabores auténticos, ingredientes reales y momentos compartidos.">
 
-        /* Recreación del Logo Filadelfia */
-        .logo-container {
-            display: flex;
-            align-items: baseline;
-            font-weight: 900;
-            font-size: 4rem;
-            letter-spacing: -2px;
-            color: white;
-            line-height: 1;
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
 
-        .logo-dot {
-            width: 14px;
-            height: 14px;
-            background-color: #f97316;
-            /* Naranja similar al de la imagen */
-            border-radius: 50%;
-            display: inline-block;
-            margin-left: 2px;
-        }
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        @media (max-width: 640px) {
-            .logo-container {
-                font-size: 2.5rem;
-            }
-
-            .logo-dot {
-                width: 10px;
-                height: 10px;
-            }
-        }
-
-        /* Fondo con overlay oscuro similar a la imagen de referencia */
-        .hero-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
-                url('image1.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .fade-in {
-            animation: fadeIn 1.5s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .cta-button {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 25px rgba(249, 115, 22, 0.5);
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="flex items-center justify-center min-h-screen text-white">
+<body>
 
-    <div class="hero-bg"></div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Filadelfia<span>.</span></a>
 
-    <main class="text-center px-4 max-w-4xl fade-in">
-        <!-- Logo Recreado -->
-        <div class="flex justify-center mb-8">
-            <div class="logo-container">
-                Filadelfia<span class="logo-dot"></span>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="btn-open-order">Pedir Online</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+            </ul>
+
+            <a href="#" class="btn btn-primary btn-open-order" id="navBtn">Hacé tu pedido</a>
+
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
+    </nav>
 
-        <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-            Próximamente nuestra web
-        </h1>
-
-        <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-lg mx-auto">
-            Estamos preparando la mejor experiencia online para que disfrutes de nuestros helados artesanales.
-        </p>
-
-        <div class="space-y-6">
-            <p class="text-sm uppercase tracking-[0.2em] text-gray-400 font-semibold">
-                ¿Tenés ganas de un helado hoy?
-            </p>
-
-            <a href="https://wa.me/5491165197521" target="_blank"
-                class="cta-button inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                    </path>
-                </svg>
-                Hace tu pedido al 1165197521
-            </a>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"
+            style="background-image: linear-gradient(rgba(15, 15, 15, 0.6), rgba(15, 15, 15, 0.85)), url('images/1.png'); background-size: cover; background-position: center;">
         </div>
 
-        <footer class="mt-24 text-gray-500 text-sm">
-            <p>&copy; 2026 Heladería Filadelfia. Todos los derechos reservados.</p>
-            <p>Sitio en construcción por: olimpo-server.lat</p>
-        </footer>
-    </main>
+        <div class="hero-content">
+            <h1>Helado artesanal de verdad</h1>
+            <p>Sabores auténticos, ingredientes reales y momentos compartidos.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary btn-open-order">Hacé tu pedido</a>
+                <a href="#contacto" class="btn btn-outline">Cómo llegar</a>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        // Simple interacción para el botón de WhatsApp si es necesario
-        document.querySelector('.cta-button').addEventListener('click', function (e) {
-            console.log('Redirigiendo a WhatsApp...');
-        });
-    </script>
+    <!-- Menú de Sabores -->
+    <section class="menu-section section-padding reveal" id="sabores">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Nuestro Menú de Sabores</h2>
+                <p class="section-subtitle">Descubrí todas nuestras variedades. Texturas sedosas, ingredientes naturales
+                    y mucho amor.</p>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Categoría Chocolates -->
+                <div class="menu-category">
+                    <h3><i class="fa-solid fa-cookie-bite" style="color: var(--primary); margin-right: 8px;"></i>
+                        Chocolates</h3>
+                    <div class="menu-flavor-item">
+                        <h4>Chocolate</h4>
+                        <p>El clásico e inconfundible, cremoso y suave.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Chocolate amargo</h4>
+                        <p>Intenso y puro cacao para paladares exigentes.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Chocolate al rhum</h4>
+                        <p>Un toque sofisticado de rhum y pasas maceradas.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Chocolate Blanco</h4>
+                        <p>Dulce y mantecoso, con auténtica manteca de cacao.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Chocolate Rocher</h4>
+                        <p>Con pasta de avellanas y trozos crujientes, inspirado en el bombón.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Chocolate c/ almendras</h4>
+                        <p>Chocolate clásico sembrado con almendras tostadas enteras.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Chocolate Marroc</h4>
+                        <p>Fusionado con bocaditos marroc originales.</p>
+                    </div>
+                </div>
+
+                <!-- Categoría Dulce de Leche -->
+                <div class="menu-category">
+                    <h3><i class="fa-solid fa-spoon" style="color: var(--primary); margin-right: 8px;"></i> Dulce de
+                        Leche</h3>
+                    <div class="menu-flavor-item">
+                        <h4>Dulce de leche</h4>
+                        <p>Nuestra receta tradicional, suave y acaramelado.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Super Dulce de leche</h4>
+                        <p>Aún más intenso, con vetas de dulce de leche natural.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Dulce de leche c/ brownie</h4>
+                        <p>Sembrado con trozos húmedos de brownie casero.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Dulce de leche c/ nuez</h4>
+                        <p>El contraste perfecto entre lo dulce y nueces pecan.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Dulce de leche granizado</h4>
+                        <p>Con finas escamas de chocolate amargo.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Dulce de leche oreo</h4>
+                        <p>Mezclado con galletitas Oreo trituradas.</p>
+                    </div>
+                </div>
+
+                <!-- Categoría Cremas -->
+                <div class="menu-category">
+                    <h3><i class="fa-solid fa-ice-cream" style="color: var(--primary); margin-right: 8px;"></i> Cremas
+                    </h3>
+                    <div class="menu-flavor-item">
+                        <h4>Tramontana</h4>
+                        <p>Crema americana con dulce de leche y bolitas de cereal bañadas.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Banana split</h4>
+                        <p>Crema de banana con hilos de chocolate y dulce de leche.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Cookies</h4>
+                        <p>Crema de vainilla con trozos de galletas de chocolate.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Crema de almendras</h4>
+                        <p>Suave crema con el sabor sutil y trocitos de almendra.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Pistacho</h4>
+                        <p>Elaborado con pasta de pistachos 100% puros.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Tiramisú</h4>
+                        <p>Crema mascarpone con bizcochos al café y cacao espolvoreado.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Clásicos cremosos</h4>
+                        <p>Americana, Vainilla, Coco, Menta, Granizado y muchos más preparados a la perfección.</p>
+                    </div>
+                </div>
+
+                <!-- Categoría Mousses y Frutales -->
+                <div class="menu-category">
+                    <h3><i class="fa-solid fa-lemon" style="color: var(--primary); margin-right: 8px;"></i> Frutales y
+                        Mousses</h3>
+                    <div class="menu-flavor-item">
+                        <h4>Frutos del bosque</h4>
+                        <p>Al agua, con moras, frambuesas y arándanos enteros.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Maracuyá</h4>
+                        <p>Refrescante, ácido y dulce, elaborado con fruta real.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Limón / Frutilla</h4>
+                        <p>Clásicos al agua, refrescantes y naturales.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Mousse de chocolate</h4>
+                        <p>Textura aireada y profunda, como el postre tradicional.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Super Sambayón</h4>
+                        <p>Crema al oporto con una textura inigualable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section class="gallery-section section-padding reveal" id="galeria">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Galería</h2>
+                <p class="section-subtitle">Momentos capturados en nuestro local.</p>
+            </div>
+
+            <div class="masonry-grid">
+                <div class="gallery-item large">
+                    <img src="images/2.jpg" class="placeholder-img">
+                    <div class="gallery-overlay">Nuestros Cucuruchos</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img"
+                        style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Fachada del local]
+                    </div>
+                    <div class="gallery-overlay">El Local</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img"
+                        style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Toppings y salsas]
+                    </div>
+                    <div class="gallery-overlay">Toppings</div>
+                </div>
+                <div class="gallery-item wide">
+                    <div class="placeholder-img"
+                        style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Clientes compartiendo]
+                    </div>
+                    <div class="gallery-overlay">Momentos Compartidos</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img"
+                        style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Mostrador de sabores]
+                    </div>
+                    <div class="gallery-overlay">El Mostrador</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img"
+                        style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Vasos de helado]
+                    </div>
+                    <div class="gallery-overlay">Vasos y Postres</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros Section -->
+    <section class="about-section section-padding reveal" id="nosotros">
+        <div class="container about-container">
+            <div class="about-images">
+                <div class="about-img">
+                    [Foto: Fachada/Local]
+                </div>
+                <div class="about-img offset">
+                    [Foto: Equipo de trabajo]
+                </div>
+            </div>
+            <div class="about-content">
+                <h2 class="section-title" style="text-align: left;">Nuestra Historia</h2>
+                <p>Filadelfia nació para ofrecer helado artesanal con identidad propia, combinando sabores clásicos y
+                    recetas elaboradas cuidadosamente para compartir buenos momentos.</p>
+                <p>Nuestra fachada de ladrillo cálido y estilo urbano refleja nuestra esencia: somos un espacio moderno
+                    pero con el corazón puesto en la tradición del verdadero helado artesanal.</p>
+                <a href="#" class="btn btn-primary btn-open-order" style="margin-top: 1rem;">Hacé tu pedido</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section reveal">
+        <div class="container cta-content">
+            <h2>Vení a probar tu próximo sabor favorito.</h2>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary btn-open-order"><i class="fa-solid fa-ice-cream"
+                        style="margin-right: 8px;"></i> Pedir Ahora</a>
+                <a href="#" class="btn btn-outline"><i class="fa-brands fa-instagram" style="margin-right: 8px;"></i>
+                    Instagram</a>
+                <a href="#contacto" class="btn btn-outline"><i class="fa-solid fa-location-dot"
+                        style="margin-right: 8px;"></i> Cómo llegar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Filadelfia<span>.</span></a>
+                    <p>Helado artesanal elaborado diariamente con pasión y los mejores ingredientes.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone" style="width: 20px;"></i> +54 9 11 1234-5678</a>
+                        </li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp" style="width: 20px;"></i> Enviar mensaje</a>
+                        </li>
+                        <li><a href="#"><i class="fa-regular fa-envelope" style="width: 20px;"></i>
+                                hola@filadelfia.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Encontranos</h4>
+                    <ul>
+                        <li><span><i class="fa-solid fa-location-dot" style="width: 20px;"></i> Calle Principal 1234,
+                                Ciudad</span></li>
+                        <li style="margin-top: 1rem;">
+                            <a href="#" style="text-decoration: underline; font-size: 0.9rem;">Ver en Google Maps</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Horarios</h4>
+                    <ul>
+                        <li><span>Lun a Jue: 12:00 - 00:00</span></li>
+                        <li><span>Vie a Dom: 12:00 - 01:00</span></li>
+                        <li style="margin-top: 1.5rem;">
+                            <div class="footer-social">
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Filadelfia Helados. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="#" class="floating-wa btn-open-order" aria-label="Ir al pedido">
+        <i class="fa-solid fa-ice-cream"></i>
+    </a>
+
+    <!-- Creador de Pedidos (Full Overlay) -->
+    <div class="order-overlay" id="orderOverlay">
+        <div class="order-overlay-content">
+            <button class="btn-close-overlay" id="closeOrderOverlay"><i class="fa-solid fa-xmark"></i></button>
+
+            <div class="text-center" style="margin-bottom: 2rem;">
+                <h2 class="section-title">Hacé tu Pedido</h2>
+                <p class="section-subtitle" style="margin-bottom: 1rem;">Elegí el tamaño, seleccioná tus sabores
+                    favoritos y te lo preparamos.</p>
+            </div>
+
+            <div class="order-grid">
+                <!-- Columna Izquierda: Tamaños y Carrito -->
+                <div class="order-column">
+                    <h3 class="order-subtitle">1. Elegí el tamaño</h3>
+                    <div class="size-selectors">
+                        <button class="btn-size" data-size="1kg" data-price="20000" data-max="4">
+                            <span class="size-title">1 KG</span>
+                            <span class="size-price">$20.000</span>
+                            <span class="size-desc">Hasta 4 gustos</span>
+                            <i class="fa-solid fa-plus add-icon"></i>
+                        </button>
+                        <button class="btn-size" data-size="1/2kg" data-price="11000" data-max="4">
+                            <span class="size-title">1/2 KG</span>
+                            <span class="size-price">$11.000</span>
+                            <span class="size-desc">Hasta 4 gustos</span>
+                            <i class="fa-solid fa-plus add-icon"></i>
+                        </button>
+                        <button class="btn-size" data-size="1/4kg" data-price="7000" data-max="3">
+                            <span class="size-title">1/4 KG</span>
+                            <span class="size-price">$7.000</span>
+                            <span class="size-desc">Hasta 3 gustos</span>
+                            <i class="fa-solid fa-plus add-icon"></i>
+                        </button>
+                    </div>
+
+                    <h3 class="order-subtitle" style="margin-top: 2rem;">2. Tu Carrito</h3>
+                    <div id="tubs-container" class="tubs-container">
+                        <div class="empty-cart-msg">Aún no agregaste ningún pote.</div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Extras y Datos -->
+                <div class="order-column">
+                    <h3 class="order-subtitle">3. Extras</h3>
+                    <div class="extras-container">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="extra-conitos">
+                            <span class="checkmark"></span>
+                            Conitos
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="extra-cucuruchos">
+                            <span class="checkmark"></span>
+                            Cucuruchos
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="extra-salsas">
+                            <span class="checkmark"></span>
+                            Salsas
+                        </label>
+                    </div>
+
+                    <h3 class="order-subtitle" style="margin-top: 2rem;">4. Tus Datos</h3>
+                    <form id="order-form" class="order-form">
+                        <div class="form-group">
+                            <label for="client-name">Nombre y Apellido *</label>
+                            <input type="text" id="client-name" class="form-control" placeholder="Ej: Juan Pérez"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-address">Dirección de Envío *</label>
+                            <input type="text" id="client-address" class="form-control"
+                                placeholder="Ej: Calle Falsa 123" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-phone">Teléfono *</label>
+                            <input type="tel" id="client-phone" class="form-control" placeholder="Ej: 11 1234-5678"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment-method">Medio de Pago *</label>
+                            <select id="payment-method" class="form-control" required>
+                                <option value="Efectivo">Efectivo</option>
+                                <option value="MercadoPago">Transferencia MercadoPago</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="cash-amount-group" style="display: flex;">
+                            <label for="cash-amount">¿Con cuánto vas a abonar? *</label>
+                            <input type="number" id="cash-amount" class="form-control" placeholder="Ej: 25000">
+                        </div>
+                    </form>
+
+                    <div class="order-summary">
+                        <div class="summary-total" style="flex-direction: column; align-items: stretch; gap: 0.5rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <span>Total a pagar:</span>
+                                <span id="total-price">$0</span>
+                            </div>
+                            <div
+                                style="text-align: center; color: #25D366; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                <i class="fa-solid fa-motorcycle"></i> ¡Envío Gratuito!
+                            </div>
+                        </div>
+                        <button type="button" id="btn-submit-order" class="btn btn-primary btn-full disabled">
+                            <i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> Enviar Pedido
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Sabores -->
+    <div class="flavor-modal-overlay" id="flavorModal">
+        <div class="flavor-modal-content">
+            <div class="flavor-modal-header">
+                <h3>Elegí tus Sabores</h3>
+                <button class="btn-close-modal" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="flavor-modal-body">
+                <div class="flavor-limit-msg" id="flavorLimitMsg">
+                    Seleccionaste <span id="currentFlavorCount">0</span> de <span id="maxFlavorCount">4</span> sabores.
+                </div>
+                <div id="flavorsList" class="flavors-list-container">
+                    <!-- Las categorías y sabores se inyectan por JS -->
+                </div>
+            </div>
+            <div class="flavor-modal-footer">
+                <button class="btn btn-primary btn-full" id="confirmFlavorsBtn">Confirmar Selección</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 
 </html>
