@@ -2,11 +2,298 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Redireccionando...</title>
-    <!-- El número 0 indica los segundos de espera antes de redirigir -->
-    <meta http-equiv="refresh" content="0; url=underconstrution.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filadelfia | Helado artesanal de verdad</title>
+    <meta name="description" content="Heladería artesanal Filadelfia. Sabores auténticos, ingredientes reales y momentos compartidos.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Si no eres redirigido automáticamente, haz clic en <a href="underconstrution.html">este enlace</a>.</p>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Filadelfia<span>.</span></a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sabores">Sabores</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+            </ul>
+            
+            <a href="#contacto" class="btn btn-primary" id="navBtn">Cómo llegar</a>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <div class="image-placeholder">
+                [Espacio para Fotografía: Local o Helados]
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Helado artesanal de verdad</h1>
+            <p>Sabores auténticos, ingredientes reales y momentos compartidos.</p>
+            <div class="hero-buttons">
+                <a href="#sabores" class="btn btn-primary">Ver sabores</a>
+                <a href="#contacto" class="btn btn-outline">Cómo llegar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sabores Section -->
+    <section class="flavors-section section-padding reveal" id="sabores">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Nuestros Sabores</h2>
+                <p class="section-subtitle">Recetas clásicas y creaciones únicas elaboradas cada día en nuestro local.</p>
+            </div>
+            
+            <div class="flavors-grid">
+                <!-- Categoria 1 -->
+                <div class="flavor-card">
+                    <div class="flavor-badge">Más pedido</div>
+                    <i class="fa-solid fa-cookie-bite flavor-icon"></i>
+                    <h3>Chocolates</h3>
+                    <p>Cacaos seleccionados, intensos y cremosos. Desde el amargo puro hasta combinaciones con frutos secos.</p>
+                    <div class="image-placeholder" style="height: 150px; position: relative; border-radius: 8px; margin-top: 1rem; font-size: 0.9rem;">
+                        [Foto: Cuchara con chocolate]
+                    </div>
+                </div>
+                
+                <!-- Categoria 2 -->
+                <div class="flavor-card">
+                    <div class="flavor-badge dark">Artesanal</div>
+                    <i class="fa-solid fa-spoon flavor-icon"></i>
+                    <h3>Dulce de Leche</h3>
+                    <p>El clásico argentino perfeccionado. Suave, tentador y con opciones con granizado o almendras.</p>
+                    <div class="image-placeholder" style="height: 150px; position: relative; border-radius: 8px; margin-top: 1rem; font-size: 0.9rem;">
+                        [Foto: Pote de Dulce de Leche]
+                    </div>
+                </div>
+                
+                <!-- Categoria 3 -->
+                <div class="flavor-card">
+                    <i class="fa-solid fa-ice-cream flavor-icon"></i>
+                    <h3>Cremas</h3>
+                    <p>Texturas sedosas y sabores delicados. Vainilla natural, sambayón y cremas con galletitas.</p>
+                    <div class="image-placeholder" style="height: 150px; position: relative; border-radius: 8px; margin-top: 1rem; font-size: 0.9rem;">
+                        [Foto: Bochas de crema]
+                    </div>
+                </div>
+                
+                <!-- Categoria 4 -->
+                <div class="flavor-card">
+                    <div class="flavor-badge accent">Fresco</div>
+                    <i class="fa-solid fa-lemon flavor-icon"></i>
+                    <h3>Frutales</h3>
+                    <p>Elaborados con fruta real y de estación. Refrescantes, naturales y libres de lácteos (al agua).</p>
+                    <div class="image-placeholder" style="height: 150px; position: relative; border-radius: 8px; margin-top: 1rem; font-size: 0.9rem;">
+                        [Foto: Helado de frutas]
+                    </div>
+                </div>
+                
+                <!-- Categoria 5 -->
+                <div class="flavor-card">
+                    <div class="flavor-badge">Edición especial</div>
+                    <i class="fa-solid fa-cake-candles flavor-icon"></i>
+                    <h3>Mousses</h3>
+                    <p>Aireados, ligeros y llenos de sabor. Una experiencia diferente para los paladares exigentes.</p>
+                    <div class="image-placeholder" style="height: 150px; position: relative; border-radius: 8px; margin-top: 1rem; font-size: 0.9rem;">
+                        [Foto: Postre mousse]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Section -->
+    <section class="experience-section section-padding reveal" id="experiencia">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">La Experiencia Filadelfia</h2>
+                <p class="section-subtitle">No es solo helado, es un momento para disfrutar.</p>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="exp-block">
+                    <div class="exp-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+                    <h4>Hecho artesanalmente</h4>
+                </div>
+                <div class="exp-block">
+                    <div class="exp-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h4>Ingredientes seleccionados</h4>
+                </div>
+                <div class="exp-block">
+                    <div class="exp-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                    <h4>Desde 2019</h4>
+                </div>
+                <div class="exp-block">
+                    <div class="exp-icon"><i class="fa-solid fa-user-group"></i></div>
+                    <h4>Ideal para compartir</h4>
+                </div>
+                <div class="exp-block">
+                    <div class="exp-icon"><i class="fa-solid fa-store"></i></div>
+                    <h4>Abierto todo el año</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section class="gallery-section section-padding reveal" id="galeria">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Galería</h2>
+                <p class="section-subtitle">Momentos capturados en nuestro local.</p>
+            </div>
+            
+            <div class="masonry-grid">
+                <div class="gallery-item large">
+                    <div class="placeholder-img" style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Cucuruchos armados]
+                    </div>
+                    <div class="gallery-overlay">Nuestros Cucuruchos</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Fachada del local]
+                    </div>
+                    <div class="gallery-overlay">El Local</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Toppings y salsas]
+                    </div>
+                    <div class="gallery-overlay">Toppings</div>
+                </div>
+                <div class="gallery-item wide">
+                    <div class="placeholder-img" style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Clientes compartiendo]
+                    </div>
+                    <div class="gallery-overlay">Momentos Compartidos</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Mostrador de sabores]
+                    </div>
+                    <div class="gallery-overlay">El Mostrador</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="display: flex; align-items: center; justify-content: center; color: #888; font-family: Outfit;">
+                        [Foto: Vasos de helado]
+                    </div>
+                    <div class="gallery-overlay">Vasos y Postres</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros Section -->
+    <section class="about-section section-padding reveal" id="nosotros">
+        <div class="container about-container">
+            <div class="about-images">
+                <div class="about-img">
+                    [Foto: Fachada/Local]
+                </div>
+                <div class="about-img offset">
+                    [Foto: Equipo de trabajo]
+                </div>
+            </div>
+            <div class="about-content">
+                <h2 class="section-title" style="text-align: left;">Nuestra Historia</h2>
+                <p>Filadelfia nació para ofrecer helado artesanal con identidad propia, combinando sabores clásicos y recetas elaboradas cuidadosamente para compartir buenos momentos.</p>
+                <p>Nuestra fachada de ladrillo cálido y estilo urbano refleja nuestra esencia: somos un espacio moderno pero con el corazón puesto en la tradición del verdadero helado artesanal.</p>
+                <a href="#sabores" class="btn btn-primary" style="margin-top: 1rem;">Conocé nuestros sabores</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section reveal">
+        <div class="container cta-content">
+            <h2>Vení a probar tu próximo sabor favorito.</h2>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp</a>
+                <a href="#" class="btn btn-outline"><i class="fa-brands fa-instagram" style="margin-right: 8px;"></i> Instagram</a>
+                <a href="#contacto" class="btn btn-outline"><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Cómo llegar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Filadelfia<span>.</span></a>
+                    <p>Helado artesanal elaborado diariamente con pasión y los mejores ingredientes.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone" style="width: 20px;"></i> +54 9 11 1234-5678</a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp" style="width: 20px;"></i> Enviar mensaje</a></li>
+                        <li><a href="#"><i class="fa-regular fa-envelope" style="width: 20px;"></i> hola@filadelfia.com</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Encontranos</h4>
+                    <ul>
+                        <li><span><i class="fa-solid fa-location-dot" style="width: 20px;"></i> Calle Principal 1234, Ciudad</span></li>
+                        <li style="margin-top: 1rem;">
+                            <a href="#" style="text-decoration: underline; font-size: 0.9rem;">Ver en Google Maps</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Horarios</h4>
+                    <ul>
+                        <li><span>Lun a Jue: 12:00 - 00:00</span></li>
+                        <li><span>Vie a Dom: 12:00 - 01:00</span></li>
+                        <li style="margin-top: 1.5rem;">
+                            <div class="footer-social">
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Filadelfia Helados. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="#" class="floating-wa" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
