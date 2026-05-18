@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Mousses": ["Mousse de limon", "Mousse de chocolate", "Mosse de café al cognac", "Super Sambayon", "Super Sambayon c/almendras", "Don pedro"],
         "Dulce de Leche": ["Dulce de leche", "Dulce de leche c/ brownie", "Dulce de leche c/ nuez", "Dulce de leche granizado", "Dulce de leche oreo", "Super Dulce de leche"],
         "Frutas al agua": ["Ananá", "Durazno", "Frambuesa", "Frutilla", "Frutos del bosque", "Limón", "Maracuya", "Naranja"],
-        "Cremas": ["Americana", "Banana", "Banana split", "Vainilla", "Cookies", "Coco", "Cereza", "Tramontana", "Granizado", "Flan", "Crema de almendras", "Pistacho", "Menta", "Tiramisu", "Kinotos", "Mantecol", "Higos c/nuez", "Frutilla a la reina", "Tarta de manzana", "Jengibre c/ miel"]
+        "Cremas": ["Americana", "Banana", "Banana split", "Vainilla", "Cookies", "Coco", "Cereza", "Tramontana", "Granizado", "Flan", "Crema de almendras", "Pistacho", "Menta granizada", "Mascarpone con frutos del bosque", "Tiramisu", "Kinotos", "Mantecol", "Higos c/nuez", "Frutilla a la reina", "Tarta de manzana", "Jengibre c/ miel"]
     };
 
     const state = {

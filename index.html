@@ -27,7 +27,10 @@
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Filadelfia<span>.</span></a>
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Filadelfia Helados" class="logo-img logo-light">
+                <img src="images/logo-dark.png" alt="Filadelfia Helados" class="logo-img logo-dark">
+            </a>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#sabores">Sabores</a></li>
@@ -57,6 +60,9 @@
             <div class="hero-buttons">
                 <a href="#" class="btn btn-primary btn-open-order">Hacé tu pedido</a>
                 <a href="#contacto" class="btn btn-outline">Cómo llegar</a>
+            </div>
+            <div class="promo-badge">
+                <i class="fa-solid fa-motorcycle"></i> ¡Envíos gratis en la zona!
             </div>
         </div>
     </section>
@@ -195,9 +201,34 @@
                         <h4>Mousse de chocolate</h4>
                         <p>Textura aireada y profunda, como el postre tradicional.</p>
                     </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3><i class="fa-solid fa-star" style="color: var(--primary); margin-right: 8px;"></i> Nuestras
+                        especialidades</h3>
                     <div class="menu-flavor-item">
                         <h4>Super Sambayón</h4>
                         <p>Crema al oporto con una textura inigualable.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Mascarpone con frutos del bosque</h4>
+                        <p>Suave crema mascarpone con moras, frambuesas y arándanos enteros.</p>
+                    </div>
+                    <div class="menu-flavor-item">
+                        <h4>Mousse de Cafe al Coñaq</h4>
+                        <p>Textura liviana y aireada que combina la intensidad del café y el cognac.</p>
+                    </div>
+                </div>
+                <!-- Promo Card -->
+                <div class="menu-promo-card">
+                    <div class="promo-content">
+                        <span class="promo-badge-small">Próximamente</span>
+                        <h3>Helado de Zapallo</h3>
+                        <p>Una edición especial con zapallo criollo, especias dulces y un toque caramelizado. ¡Ideal
+                            para este otoño!</p>
+                    </div>
+                    <div class="promo-icon">
+                        <i class="fa-solid fa-leaf"></i>
                     </div>
                 </div>
             </div>
@@ -255,18 +286,21 @@
         <div class="container about-container">
             <div class="about-images">
                 <div class="about-img">
-                    [Foto: Fachada/Local]
+                    <img src="images/1.png" class="placeholder-img">
                 </div>
                 <div class="about-img offset">
-                    [Foto: Equipo de trabajo]
+                    <img src="images/8.jpg" class="placeholder-img">
                 </div>
             </div>
             <div class="about-content">
                 <h2 class="section-title" style="text-align: left;">Nuestra Historia</h2>
-                <p>Filadelfia nació para ofrecer helado artesanal con identidad propia, combinando sabores clásicos y
-                    recetas elaboradas cuidadosamente para compartir buenos momentos.</p>
-                <p>Nuestra fachada de ladrillo cálido y estilo urbano refleja nuestra esencia: somos un espacio moderno
-                    pero con el corazón puesto en la tradición del verdadero helado artesanal.</p>
+                <p>Filadelfia nació para ofrecer helado artesanal con identidad propia, combinando clásicos
+                    irresistibles con recetas creadas para compartir buenos momentos. Somos el punto de encuentro de las
+                    familias del barrio, los chicos a la
+                    salida del colegio y quienes eligen terminar el día con un buen helado en casa.</p>
+                <p>Detrás de cada uno de nuestros sabores hay más de 30 años de experiencia en el rubro y un secreto
+                    único: una receta original de 1939, heredada de un gran maestro heladero que confió en nosotros para
+                    mantener vivo el verdadero arte del helado.</p>
                 <a href="#" class="btn btn-primary btn-open-order" style="margin-top: 1rem;">Hacé tu pedido</a>
             </div>
         </div>
@@ -274,15 +308,26 @@
 
     <!-- Final CTA Section -->
     <section class="cta-section reveal">
-        <div class="container cta-content">
-            <h2>Vení a probar tu próximo sabor favorito.</h2>
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-primary btn-open-order"><i class="fa-solid fa-ice-cream"
-                        style="margin-right: 8px;"></i> Pedir Ahora</a>
-                <a href="#" class="btn btn-outline"><i class="fa-brands fa-instagram" style="margin-right: 8px;"></i>
-                    Instagram</a>
-                <a href="#contacto" class="btn btn-outline"><i class="fa-solid fa-location-dot"
-                        style="margin-right: 8px;"></i> Cómo llegar</a>
+        <div class="container cta-container">
+            <div class="cta-content">
+                <h2>Vení a probar tu próximo sabor favorito.</h2>
+                <p class="cta-text">Te esperamos en Vidal 1565, Belgrano, CABA. Vení a buscar el verdadero helado
+                    artesanal elaborado con las mejores materias primas o pedilo directamente desde tu casa.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-open-order"><i class="fa-solid fa-ice-cream"
+                            style="margin-right: 8px;"></i> Pedir Ahora</a>
+                    <a href="https://www.instagram.com/heladeria_filadelfia/" target="_blank" class="btn btn-outline"><i
+                            class="fa-brands fa-instagram" style="margin-right: 8px;"></i>
+                        Instagram</a>
+                    <a href="https://maps.app.goo.gl/FifagzoLyuYjSPwu7" target="_blank" class="btn btn-outline"><i
+                            class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Cómo llegar</a>
+                </div>
+            </div>
+            <div class="cta-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3285.402699922423!2d-58.4586886!3d-34.5686757!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb504f4ba768f%3A0xd3619f5043dd1206!2sHelader%C3%ADa%20Filadelfia!5e0!3m2!1ses-419!2sar!4v1779109461918!5m2!1ses-419!2sar"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -292,29 +337,32 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo">Filadelfia<span>.</span></a>
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" alt="Filadelfia Helados" class="logo-img">
+                    </a>
                     <p>Helado artesanal elaborado diariamente con pasión y los mejores ingredientes.</p>
                 </div>
 
                 <div class="footer-links">
                     <h4 class="footer-title">Contacto</h4>
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-phone" style="width: 20px;"></i> +54 9 11 1234-5678</a>
+                        <li><a href="tel:+5491165197521"><i class="fa-solid fa-phone" style="width: 20px;"></i> +54 9
+                                1165197521</a>
                         </li>
-                        <li><a href="#"><i class="fa-brands fa-whatsapp" style="width: 20px;"></i> Enviar mensaje</a>
+                        <li><a href="https://wa.me/5491165197521"><i class="fa-brands fa-whatsapp"
+                                    style="width: 20px;"></i> Enviar mensaje</a>
                         </li>
-                        <li><a href="#"><i class="fa-regular fa-envelope" style="width: 20px;"></i>
-                                hola@filadelfia.com</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h4 class="footer-title">Encontranos</h4>
                     <ul>
-                        <li><span><i class="fa-solid fa-location-dot" style="width: 20px;"></i> Calle Principal 1234,
-                                Ciudad</span></li>
+                        <li><span><i class="fa-solid fa-location-dot" style="width: 20px;"></i> Vidal 1565,
+                                CABA</span></li>
                         <li style="margin-top: 1rem;">
-                            <a href="#" style="text-decoration: underline; font-size: 0.9rem;">Ver en Google Maps</a>
+                            <a href="https://maps.app.goo.gl/FifagzoLyuYjSPwu7" target="_blank"
+                                style="text-decoration: underline; font-size: 0.9rem;">Ver en Google Maps</a>
                         </li>
                     </ul>
                 </div>
@@ -322,13 +370,11 @@
                 <div class="footer-links">
                     <h4 class="footer-title">Horarios</h4>
                     <ul>
-                        <li><span>Lun a Jue: 12:00 - 00:00</span></li>
-                        <li><span>Vie a Dom: 12:00 - 01:00</span></li>
+                        <li><span>Lun a Sáb: 13:00 - 01:00</span></li>
+                        <li><span>Dom: 12:00 - 01:00</span></li>
                         <li style="margin-top: 1.5rem;">
                             <div class="footer-social">
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                             </div>
                         </li>
                     </ul>
@@ -418,8 +464,8 @@
                         </div>
                         <div class="form-group">
                             <label for="client-address">Dirección de Envío *</label>
-                            <input type="text" id="client-address" class="form-control"
-                                placeholder="Ej: Calle Falsa 123" required>
+                            <input type="text" id="client-address" class="form-control" placeholder="Ej: Vidal 1565"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="client-phone">Teléfono *</label>

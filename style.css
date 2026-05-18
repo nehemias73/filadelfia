@@ -150,10 +150,35 @@ ul {
   color: white;
   letter-spacing: -0.5px;
   transition: var(--transition);
+  display: flex;
+  align-items: center;
 }
 
 .logo span {
   color: var(--primary);
+}
+
+.logo-img {
+  height: 55px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo-dark {
+  display: none;
+}
+
+.navbar.scrolled .logo-light {
+  display: none;
+}
+
+.navbar.scrolled .logo-dark {
+  display: block;
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.05);
 }
 
 .nav-links {
@@ -270,6 +295,30 @@ ul {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+.promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.6rem 1.25rem;
+  background-color: rgba(242, 106, 33, 0.2);
+  border: 1px solid var(--primary);
+  color: white;
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease 0.6s forwards, pulse 2.5s infinite 1.4s;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(242, 106, 33, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(242, 106, 33, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(242, 106, 33, 0); }
 }
 
 /* Flavors Section */
@@ -493,7 +542,7 @@ ul {
 .cta-section {
   background-color: var(--bg-dark);
   color: white;
-  padding: 8rem 0;
+  padding: 6rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -509,24 +558,62 @@ ul {
   border-radius: 50%;
 }
 
+.cta-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
 .cta-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  text-align: left;
 }
 
 .cta-content h2 {
-  font-size: 3.5rem;
-  margin-bottom: 2.5rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
   color: white;
+  line-height: 1.2;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2.5rem;
 }
 
 .cta-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.cta-map {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  border: 6px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.cta-map:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.cta-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* Footer */
@@ -654,6 +741,11 @@ ul {
   .about-container { grid-template-columns: 1fr; gap: 3rem; }
   .about-images { max-width: 600px; margin: 0 auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  
+  .cta-container { grid-template-columns: 1fr; gap: 3.5rem; }
+  .cta-content { text-align: center; }
+  .cta-buttons { justify-content: center; }
+  .cta-map { height: 320px; max-width: 600px; margin: 0 auto; }
 }
 
 @media (max-width: 768px) {
@@ -695,6 +787,7 @@ ul {
   
   .cta-content h2 { font-size: 2.5rem; }
   .cta-buttons { flex-direction: column; }
+  .cta-map { height: 280px; }
   
   .footer-grid { grid-template-columns: 1fr; }
   
@@ -1264,4 +1357,75 @@ ul {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.4;
+}
+
+/* Promo Card in Menu */
+.menu-promo-card {
+    background: linear-gradient(135deg, var(--primary) 0%, #d85510 100%);
+    border-radius: var(--border-radius);
+    padding: 2rem 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(242, 106, 33, 0.2);
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 0.8s ease;
+}
+
+.menu-promo-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+}
+
+.promo-badge-small {
+    background: white;
+    color: var(--primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.menu-promo-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.menu-promo-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.promo-icon {
+    font-size: 4rem;
+    opacity: 0.15;
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    z-index: 1;
+    transform: rotate(15deg);
 }
